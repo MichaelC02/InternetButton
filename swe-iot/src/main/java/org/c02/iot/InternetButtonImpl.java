@@ -26,7 +26,6 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void setLed(int postition, Color color) {
 		int colorRGB = color.getRGB();
-		
 		String parameter = String.format("%02d%03d%03d%03d", postition,
 															 ((colorRGB & 0x00FF0000) >> 16),
 															 ((colorRGB & 0x0000FF00) >> 8),
@@ -34,10 +33,8 @@ public class InternetButtonImpl implements InternetButtonApi {
 		try {
 			wrapper.callMethod("led", parameter);
 		} catch (ParticleException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// TODO Auto-generated method stub
 	}
 
 	public void allLedsOff() {
@@ -47,12 +44,9 @@ public class InternetButtonImpl implements InternetButtonApi {
 			try {
 				wrapper.callMethod("led", parameter);
 			} catch (ParticleException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		// TODO Auto-generated method stub
-
 	}
 
 	public void playSound()
@@ -60,7 +54,6 @@ public class InternetButtonImpl implements InternetButtonApi {
 		try {
 			wrapper.callMethod("play", null);
 		} catch (ParticleException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -70,11 +63,8 @@ public class InternetButtonImpl implements InternetButtonApi {
 		try {
 			wrapper.callMethod("reset",null);
 		} catch (ParticleException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// TODO Auto-generated method stub
-		
 	}
 
 }
