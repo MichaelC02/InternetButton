@@ -22,9 +22,9 @@ public class InternetButtonImpl implements InternetButtonApi {
 		int colorRGB = color.getRGB();
 		
 		String parameter = String.format("%02d%03d%03d%03d", postition,
-															 ((colorRGB & 0x0F00) >> 16),
-															 ((colorRGB & 0x00F0) >> 8),
-															 ((colorRGB & 0x000F)));
+															 ((colorRGB & 0x00FF0000) >> 16),
+															 ((colorRGB & 0x0000FF00) >> 8),
+															 ((colorRGB & 0x000000FF)));
 		try {
 			wrapper.callMethod("led", parameter);
 		} catch (ParticleException e) {
