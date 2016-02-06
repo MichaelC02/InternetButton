@@ -3,7 +3,6 @@ package org.c02.iot.examples;
 import java.awt.Color;
 
 import org.c02.iot.InternetButtonApi;
-import org.c02.iot.InternetButtonApi.ButtonDirection;
 import org.c02.iot.InternetButtonImpl;
 import org.c02.iot.cloud.api.ParticleApiWrapper;
 import org.c02.iot.cloud.api.ParticleApiWrapperImpl;
@@ -21,25 +20,19 @@ public class LedSetAllColorsByAcceleration {
 		button.allLedsOff();
 		
 		int xValue = 0;
-		//int yValue = 0;
-		//int zValue = 0;
-		int red = 0;
+		int yValue = 0;
+		int zValue = 0;
 		
 		while (true)
 		{
 			xValue = button.getXVal();
-			//yValue = button.getYVal();
-			//zValue = button.getZVal();
+			yValue = button.getYVal();
+			zValue = button.getZVal();
 			
-			// X-Werte zwischen -128 und 127
-			// Keine negativen X-Werte
-			red = xValue+128;
-			
-			Color color  = new Color(red, 0, 0);
+			// XYZ-Werte zwischen -128 und 127
+			// Keine negativen XYZ-Werte			
+			Color color  = new Color(xValue+128, yValue+128, zValue+128);
 			button.setLed(1, color);
 		}
-
-		
 	}
-
 }
