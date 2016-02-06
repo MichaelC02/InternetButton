@@ -20,6 +20,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void setLed(int postition, Color color) {
 		int colorRGB = color.getRGB();
+		
 		String parameter = String.format("%02d%03d%03d%03d", postition,
 															 ((colorRGB & 0x0F00) >> 16),
 															 ((colorRGB & 0x00F0) >> 8),
