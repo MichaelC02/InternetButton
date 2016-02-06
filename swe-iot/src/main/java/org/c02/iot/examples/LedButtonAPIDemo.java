@@ -18,6 +18,7 @@ public class LedButtonAPIDemo {
 
 		InternetButtonApi button = new InternetButtonImpl(api);
 		button.setLed(2, Color.ORANGE);
+	
 		
 	}
 
