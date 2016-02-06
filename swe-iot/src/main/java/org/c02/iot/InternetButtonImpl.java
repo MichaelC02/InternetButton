@@ -15,7 +15,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 	}
 
 	public int getButtonCounter(ButtonDirection button) {
-		String variable = String.format("countButton%d", button.ordinal());
+		String variable = String.format("countButton%d", (button.ordinal()+1));
 		try {
 			wrapper.readVariable(variable);
 		} catch (IOException e) {
