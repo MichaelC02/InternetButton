@@ -26,9 +26,9 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	}
 
-	public void playSound() {
-		// TODO Auto-generated method stub
-
+	public void playSound()
+	{
+		
 	}
 
 	public void resetButtonCounters() {
