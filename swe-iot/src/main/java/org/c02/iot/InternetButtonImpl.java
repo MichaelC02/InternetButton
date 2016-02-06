@@ -38,14 +38,11 @@ public class InternetButtonImpl implements InternetButtonApi {
 	}
 
 	public void allLedsOff() {
-		for(int i = 1; i <= 11; i++)
-		{
-			String parameter = String.format("%02d000000000", i);
-			try {
-				wrapper.callMethod("led", parameter);
-			} catch (ParticleException e) {
-				e.printStackTrace();
-			}
+		try {
+			wrapper.callMethod("ledsOff",null);
+		} catch (ParticleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 
