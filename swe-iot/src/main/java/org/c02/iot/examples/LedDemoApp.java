@@ -17,6 +17,9 @@ public class LedDemoApp {
 	public static void main(String[] args) throws IOException, InterruptedException
 	{
 		InternetButtonApi button = new InternetButtonImpl(api);
+		
+		button.allLedsOff();
+		
 		button.setLed(1, Color.GREEN);
 		button.setLed(2, Color.GREEN);
 		button.setLed(3, Color.GREEN);
@@ -36,6 +39,8 @@ public class LedDemoApp {
 		button.setLed(9, Color.RED);
 		button.setLed(11, Color.RED);
 		
+		button.allLedsOff();
+		
 		button.setLed(2, Color.WHITE);
 		button.setLed(4, Color.WHITE);
 		button.setLed(6, Color.WHITE);
@@ -43,7 +48,7 @@ public class LedDemoApp {
 		button.setLed(10, Color.WHITE);
 		
 		int ledNumber = 1;
-		for (int i = 1; i<=55; i++)
+		for (int i = 1; i<=11; i++)
 		{
 			button.setLed(1, Color.WHITE);
 			button.setLed(2, Color.WHITE);
@@ -59,7 +64,6 @@ public class LedDemoApp {
 			
 			button.setLed(ledNumber, Color.BLACK);
 			
-			Thread.sleep(500);
 			
 			if (ledNumber == 11)
 				ledNumber = 1;
