@@ -37,7 +37,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 	public void allLedsOff() {
 		for(int i = 1; i <= 11; i++)
 		{
-			String parameter = String.format("%02000000000", i);
+			String parameter = String.format("%02d000000000", i);
 			try {
 				wrapper.callMethod("led", parameter);
 			} catch (ParticleException e) {
