@@ -63,5 +63,33 @@ public class InternetButtonImpl implements InternetButtonApi {
 			e.printStackTrace();
 		}
 	}
-
+	
+	public int getXVal()
+	{
+		try {
+			return wrapper.readVariable("xValue");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
+	public int getYVal()
+	{
+		try {
+			return wrapper.readVariable("zValue");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	public int getZVal()
+	{
+		try {
+			return wrapper.readVariable("zValue");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }

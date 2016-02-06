@@ -19,4 +19,10 @@ public interface InternetButtonApi {
 	void allLedsOff();
 	
 	void playSound();
+	
+	int getXVal();
+	
+	int getYVal();
+	
+	int getZVal();
 }
