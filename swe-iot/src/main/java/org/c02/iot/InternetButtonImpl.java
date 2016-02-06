@@ -41,6 +41,13 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void playSound() {
 		// TODO Auto-generated method stub
+		
+		try {
+			wrapper.callMethod("play", null);
+		} catch (ParticleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
