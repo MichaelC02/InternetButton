@@ -77,7 +77,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 	public int getYVal()
 	{
 		try {
-			return wrapper.readVariable("zValue");
+			return wrapper.readVariable("yValue");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
