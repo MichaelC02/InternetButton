@@ -14,7 +14,7 @@ public class LedDemoApp {
 	static ParticleApiWrapper api = new ParticleApiWrapperImpl(DemoConstants.deviceId,
 			DemoConstants.accessToken);
 	
-	public static void main(String[] args) throws IOException, InterruptedException
+	public static void main(String[] args) throws IOException
 	{
 		InternetButtonApi button = new InternetButtonImpl(api);
 		
