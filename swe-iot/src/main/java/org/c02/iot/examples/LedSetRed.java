@@ -26,8 +26,14 @@ public class LedSetRed {
 		{
 			count = button.getButtonCounter(ButtonDirection.North);
 			int red = (count*10)%255;
-			String rgb = String.format("%03d000000", red);
-			button.setLed(1, Color.decode(rgb));
+			
+			if(count%10 == 0)
+				button.playSound();
+			
+			Color color  = new Color(red, 0, 0);
+			//String rgb = String.format("%03d000000", red);
+			button.setLed(1, color);
+			
 			Thread.sleep(100);
 			
 		}
