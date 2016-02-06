@@ -19,15 +19,22 @@ public class LedSetRed {
 
 		InternetButtonApi button = new InternetButtonImpl(api);
 		button.allLedsOff();
+		button.resetButtonCounters();
+		
 		int count = 0;
 		while (true)
 		{
 			count = button.getButtonCounter(ButtonDirection.North);
 			int red = (count*10)%255;
-			Color color = new Color(red, 0, 0);
+			
+			if(count%10 == 0)
+				button.playSound();
+			
+			Color color  = new Color(red, 0, 0);
 			//String rgb = String.format("%03d000000", red);
 			button.setLed(1, color);
-		//	Thread.sleep(100);
+			
+			Thread.sleep(100);
 			
 		}
 
